@@ -33,4 +33,4 @@ jobs:
         TWINE_PASSWORD: ${{ secrets.PYPI_TEST_TOKEN }}
       run: |
         python -m build --sdist --wheel ./
-        python -m twine upload --skip-existing --non-interactive --verbose dist/*
+        python -m twine upload --repository testpypi --skip-existing --non-interactive --verbose dist/*
