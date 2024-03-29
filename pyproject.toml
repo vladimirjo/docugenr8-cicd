@@ -20,6 +20,8 @@ dev = ["ruff", "mypy"]
 build = ["build", "setuptools", "twine"]
 test = ["pytest"]
 
+[tool.setuptools_scm]
+
 [tool.ruff]
 target-version = "py310"
 select = ["F", "E"]
