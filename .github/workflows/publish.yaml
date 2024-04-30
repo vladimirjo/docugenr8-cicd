@@ -28,13 +28,6 @@ jobs:
                   python -m pip install --upgrade pip
                   python -m pip install tox
 
-            - name: Test Environment Variables
-              run: |
-                  env
-                  echo ${{ vars.PROD_PYPI_TOKEN }}
-              env:
-                  PROD_PYPI_TOKEN: ${{ vars.PROD_PYPI_TOKEN }}
-
             - name: Publish Package
               run: |
                   echo $PROD_PYPI_TOKEN
