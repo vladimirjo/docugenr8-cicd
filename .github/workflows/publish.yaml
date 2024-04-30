@@ -33,3 +33,5 @@ jobs:
 
       - name: Publish Package
         run: tox -e publish
+        env:
+          PROD_PYPI_TOKEN: ${{ vars.PROD_PYPI_TOKEN }}
