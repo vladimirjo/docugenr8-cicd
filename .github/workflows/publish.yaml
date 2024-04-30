@@ -25,9 +25,13 @@ jobs:
           python -m pip install tox
 
       - name: Test Environment Variables
-        run: env
+        run: |
+          env
+          echo ${{ secrets.PROD_PYPI_TOKEN }}
+        env:
+          PROD_PYPI_TOKEN: ${{ secrets.PROD_PYPI_TOKEN }}
 
       - name: Publish Package
         run: tox -e publish
         env:
-          PROD_PYPI_TOKEN: ${{ env.PROD_PYPI_TOKEN }}
+          PROD_PYPI_TOKEN: ${{ secrets.PROD_PYPI_TOKEN }}
