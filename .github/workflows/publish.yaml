@@ -6,8 +6,6 @@ on:
     types: [closed]
     branches:
       - main
-env:
-  env_var: ${{ vars.PROD_PYPI_TOKEN }}
 
 jobs:
   publish:
@@ -30,6 +28,8 @@ jobs:
         run: |
           env
           echo ${{ vars.PROD_PYPI_TOKEN }}
+        env:
+          PROD_PYPI_TOKEN: ${{ vars.PROD_PYPI_TOKEN }}
 
       - name: Publish Package
         run: tox -e publish
