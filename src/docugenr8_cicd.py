@@ -1,9 +1,3 @@
-"""Game and player management package.
-
-This package provides classes for managing players and games.
-"""
-
-
 def example_sum(x: int, y: int) -> int:
     """_summary_.
 
