@@ -20,7 +20,7 @@ version = { file = "version.txt" }
 [project.optional-dependencies]
 qa = ["ruff", "mypy"]
 test = ["pytest", "pytest-cov"]
-build = ["build", "setuptools", "twine"]
+build = ["build", "setuptools", "twine", "tox"]
 dev = ["docugenr8-cicd[qa, test, build]"]
 
 [tool.ruff]

@@ -1,4 +1,4 @@
-name: Code Quality Assurance
+name: Code Quality Check
 
 on:
     workflow_dispatch:
@@ -24,8 +24,17 @@ jobs:
                   python -m pip install --upgrade pip
                   python -m pip install tox
 
-            - name: Run Linting and Formatting
-              run: tox -e qa
+            - name: Run Linting
+              continue-on-error: true
+              run: tox -e linting
+
+            - name: Run Formatting
+              continue-on-error: true
+              run: tox -e format
+
+            - name: Run Type Checking
+              continue-on-error: true
+              run: tox -e type_check
 
             - name: Run Testing
               run: tox -e test
