@@ -65,7 +65,7 @@ jobs:
             - name: Run Type Check
               run: tox -e type_check
 
-    test:
+    tests:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout Repository
@@ -81,5 +81,5 @@ jobs:
                   python -m pip install --upgrade pip
                   python -m pip install tox
 
-            - name: Run Testing
+            - name: Run Tests
               run: tox -e test

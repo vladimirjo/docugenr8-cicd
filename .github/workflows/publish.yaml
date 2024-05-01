@@ -33,4 +33,4 @@ jobs:
                   echo $PROD_PYPI_TOKEN
                   tox -e publish
               env:
-                  PROD_PYPI_TOKEN: ${{ vars.PROD_PYPI_TOKEN }}
+                  PROD_PYPI_TOKEN: ${{ secrets.PROD_PYPI_TOKEN }}
