@@ -102,8 +102,7 @@ jobs:
               continue-on-error: true
               run: |
                   ls -al $GITHUB_WORKSPACE/
-                  ls -al $GITHUB_WORKSPACE/scripts/
                   chmod --help
-                  cat $GITHUB_WORKSPACE/scripts/check-version.sh
-                  chmod +x $GITHUB_WORKSPACE/scripts/check-version.sh
-                  bash $GITHUB_WORKSPACE/scripts/check-version.sh
+                  cat $GITHUB_WORKSPACE/check-version.sh
+                  chmod +x $GITHUB_WORKSPACE/check-version.sh
+                  bash $GITHUB_WORKSPACE/check-version.sh
