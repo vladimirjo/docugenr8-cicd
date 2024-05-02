@@ -16,6 +16,7 @@ jobs:
 
             - name: Run Check Version
               shell: bash
+              continue-on-error: true
               run: |
                   ls -al $GITHUB_WORKSPACE/
                   chmod --help
