@@ -83,3 +83,12 @@ jobs:
 
             - name: Run Tests
               run: tox -e test
+
+    version_check:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v4
+
+            - name: Set up Python
+              run: bash scripts/check-version.sh
