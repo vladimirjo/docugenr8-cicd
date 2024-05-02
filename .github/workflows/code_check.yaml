@@ -97,12 +97,8 @@ jobs:
             - name: Checkout Repository
               uses: actions/checkout@v4
 
-            - name: Check wokring directory
-              run: |
-                  echo "$PWD"
-                  ls
-
-            - name: Set up Python
+            - name: Run Check Version
+              shell: bash
               run: |
                   cd scripts
                   ls
