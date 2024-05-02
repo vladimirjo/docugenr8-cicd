@@ -18,9 +18,6 @@ jobs:
                   ref: ${{github.event.pull_request.head.ref}}
                   repository: ${{github.event.pull_request.head.repo.full_name}}
 
-            - name: Check github branch
-              run: git status
-
             - name: Set up Python
               uses: actions/setup-python@v5
               with:

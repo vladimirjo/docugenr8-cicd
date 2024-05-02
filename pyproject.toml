@@ -18,10 +18,10 @@ dynamic = ["version"]
 version = { file = "version.txt" }
 
 [project.optional-dependencies]
-qa = ["ruff", "mypy"]
+check = ["ruff", "mypy"]
 test = ["pytest", "pytest-cov"]
 build = ["build", "setuptools", "twine", "tox"]
-dev = ["docugenr8-cicd[qa, test, build]"]
+dev = ["docugenr8-cicd[check, test, build]"]
 
 [tool.ruff]
 extend-exclude = ["docs", "tests"]
