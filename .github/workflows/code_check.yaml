@@ -104,7 +104,6 @@ jobs:
 
             - name: Set up Python
               run: |
-                  ls
                   cd scripts
                   ls
-                  bash scripts/check-version.sh
+                  bash check-version.sh
