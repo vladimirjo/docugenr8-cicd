@@ -100,4 +100,6 @@ jobs:
             - name: Run Check Version
               shell: bash
               run: |
+                  cd $GITHUB_WORKSPACE/scripts/
+                  ls -al
                   bash $GITHUB_WORKSPACE/scripts/check-version.sh
