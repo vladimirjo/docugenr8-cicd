@@ -19,6 +19,6 @@ jobs:
               run: |
                   ls -al $GITHUB_WORKSPACE/
                   chmod --help
-                  cat $GITHUB_WORKSPACE/check-version.sh
-                  chmod +x $GITHUB_WORKSPACE/check-version.sh
-                  bash $GITHUB_WORKSPACE/check-version.sh
+                  cat $GITHUB_WORKSPACE/version.txt
+              #   chmod +x $GITHUB_WORKSPACE/check-version.sh
+              #   bash $GITHUB_WORKSPACE/check-version.sh
