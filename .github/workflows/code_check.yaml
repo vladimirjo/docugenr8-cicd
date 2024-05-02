@@ -103,4 +103,7 @@ jobs:
                   ls
 
             - name: Set up Python
-              run: bash scripts/check-version.sh
+              run: |
+                  ls
+                  cd scripts
+                  bash scripts/check-version.sh
