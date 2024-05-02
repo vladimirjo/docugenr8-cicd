@@ -99,4 +99,4 @@ jobs:
 
             - name: Run Check Version
               shell: bash
-              run: bash $GITHUB_WORKSPACE/scripts/check_version.sh
+              run: bash $GITHUB_WORKSPACE/scripts/version.sh
