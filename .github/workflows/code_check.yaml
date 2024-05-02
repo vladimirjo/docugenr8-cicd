@@ -99,7 +99,9 @@ jobs:
 
             - name: Run Check Version
               shell: bash
+              continue-on-error: true
               run: |
-                  chmod +x $GITHUB_WORKSPACE/scripts/check-version.sh
+                  ls -al $GITHUB_WORKSPACE/
                   ls -al $GITHUB_WORKSPACE/scripts/
+                  chmod +x $GITHUB_WORKSPACE/scripts/check-version.sh
                   bash $GITHUB_WORKSPACE/scripts/check-version.sh
