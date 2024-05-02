@@ -100,7 +100,7 @@ jobs:
             - name: Check wokring directory
               run: |
                   echo "$PWD"
-                  list
+                  ls
 
             - name: Set up Python
               run: bash scripts/check-version.sh
