@@ -106,4 +106,5 @@ jobs:
               run: |
                   ls
                   cd scripts
+                  ls
                   bash scripts/check-version.sh
